@@ -1,1 +1,173 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Profile</title><link href="../css/style.css" rel="stylesheet"></head><body ng-app="nomad"><div class="container"><div class="navbar navbar-inverse navbar-nomad"><div class="navbar-header"><a href="/" class="navbar-brand"><img src="../images/logo.png"></a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="#"><span class="icon icon-convesration"></span><span class="cnt">4</span></a></li><li><a href="#"><span class="icon icon-newspaper"></span></a></li><li dropdown class="dropdown"><a href="#" dropdown-toggle class="dropdown-toggle"><span class="icon icon-settings"></span></a><ul class="dropdown-menu"><li><a href="#"><div class="title">OVERVIEW</div><div class="text">Lorem ipsum dolce kappa</div></a></li><li><a href="#"><div class="title">SUPPORT</div><div class="text">Lorem ipsum dolce kappa</div></a></li></ul></li><li><img src="../images/test/2.png" width="80" height="80"></li></ul></div></div></div><div ng-init="alerts = [{ type: 'danger', msg: 'Notification Alert: Your project deliverable is in 4 days.' }]" class="container"><alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alerts.splice($index, 1);">{{alert.msg}}</alert></div><div class="container"><div class="row profile"><div class="col-md-3"><div class="avatar"><img src="../images/test/1.png"></div><div class="block-green"><ul class="menu list-unstyled"><li><a href="#"><span class="icon icon-message"></span><span>Send a Message</span></a></li><li class="disabled"><a href="#" class="disabled"><span class="icon icon-message"></span><span>Request <br/> Contact Details</span></a></li></ul><div class="title">Expert Stream</div><ul class="list list-unstyled"><li><div class="sub-title">STREAM ONE</div><div class="text">Lorem ipsum site amet, conse ctur vitae enim ut dolor</div></li><li><div class="title">FACEBOOK STREAM</div><div class="text">Lorem ipsum site amet, conse ctur vitae enim ut dolor</div></li><li><div class="title">BLOG STREAM 2</div><div class="text">Lorem ipsum site amet, conse ctur vitae enim ut dolor</div></li></ul></div></div><div class="col-md-6"><div class="block-user block-grey"><div class="username">Michael Brown</div><div class="spec">I’m Graphic Designer in Chicago, IL. USA</div><div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae enim ut dolor tincidunt elementum. Sed porta tincidunt ante, tempus iaculis diam hendrerit a. Morbi ut sagittis sapien, ut dapibus tortor. Quisque nec dolor eget mauris pulvinar malesuada eu et sem. Sed lacus ligula, accumsan vitae sollicitudin venenatis, auctor vitae tells.</div><div class="social"><a href="#"><span class="img-icon facebook"></span></a><a href="#"><span class="img-icon twitter"></span></a><a href="#"><span class="img-icon pinterest"></span></a></div><div class="honors"><span class="img-icon star"></span><span class="img-icon cup"></span></div></div><div class="block-white"><div class="title">Experience</div><div class="years">2000 - 2002</div><div class="clearfix"></div><div class="sub-title">Nescafe Interactive</div><div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae enim ut dolor tincidunt elementum. Sed porta tincidunt ante, tempus iaculis diam hendrerit a. Morbi ut sagittis sapien.</div></div><div class="block-white"><div class="title">Education</div><div class="clearfix"></div><div class="item"><div class="years">1999 - 2000</div><div class="sub-title">NorthEastern University</div><div class="city">Chicago IL</div><div class="faculty">M.F.A Graphic Design</div></div><div class="item"><div class="years">1999 - 2000</div><div class="sub-title">DePaul University</div><div class="city">Chicago IL</div><div class="faculty">M.F.A Graphic Design</div></div></div></div><div class="col-md-3"><div class="right-panel"><div class="skills"><div class="title">Skills</div><div class="item"><span>Packaging Design</span><progressbar value="90"></progressbar></div><div class="item"><span>Illustration</span><progressbar value="60"></progressbar></div><div class="item"><span>Packaging Design</span><progressbar value="50" type="yellow"></progressbar></div><div class="item"><span>Packaging Design</span><progressbar value="20" type="red"></progressbar></div></div><div class="porfolio"><div class="title">Project portfolio</div><ul class="media-list"><li class="media"><div class="media-left"><a href="#"><img src="../images/test/4.png" width="50" height="50" class="media-object"></a></div><div class="media-body"><div class="media-heading">Nestea Package</div><div class="text">Package design</div><div ng-init="rate[1]=2"><rating ng-model="rate[1]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating></div></div></li><li class="media"><div class="media-left"><a href="#"><img src="../images/test/3.png" width="50" height="50" class="media-object"></a></div><div class="media-body"><div class="media-heading">DURACELL</div><div class="text">web design, name two</div><div ng-init="rate[222]=1"><rating ng-model="rate[222]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating></div></div></li><li class="media"><div class="media-left"><a href="#"><img src="../images/test/5.png" width="50" height="50" class="media-object"></a></div><div class="media-body"><div class="media-heading">COCA COLA</div><div class="text">Package design, branding</div><div ng-init="rate[11]=3"><rating ng-model="rate[11]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating></div></div></li><li class="media"><div class="media-left"><a href="#"><img src="../images/test/1.png" width="50" height="50" class="media-object"></a></div><div class="media-body"><div class="media-heading">DURACELL</div><div class="text">web design, name two</div><div ng-init="rate[222]=1"><rating ng-model="rate[222]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating></div></div></li><li class="media"><div class="media-left"><a href="#"><img src="../images/test/2.png" width="50" height="50" class="media-object"></a></div><div class="media-body"><div class="media-heading">COCA COLA</div><div class="text">Package design, branding</div><div ng-init="rate[11]=3"><rating ng-model="rate[11]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating></div></div></li></ul></div></div></div></div></div><script src="../js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body ng-app="nomad">
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-nomad">
+        <div class="navbar-header"><a href="/" class="navbar-brand"><img src="../images/logo.png"></a></div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="icon icon-convesration"></span><span class="cnt">4</span></a></li>
+            <li><a href="#"><span class="icon icon-newspaper"></span></a></li>
+            <li dropdown class="dropdown"><a href="#" dropdown-toggle class="dropdown-toggle"><span class="icon icon-settings"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">
+                    <div class="title">OVERVIEW</div>
+                    <div class="text">Lorem ipsum dolce kappa</div></a></li>
+                <li><a href="#">
+                    <div class="title">SUPPORT</div>
+                    <div class="text">Lorem ipsum dolce kappa</div></a></li>
+              </ul>
+            </li>
+            <li><img src="../images/test/2.png" width="80" height="80"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div ng-init="alerts = [{ type: 'danger', msg: 'Notification Alert: Your project deliverable is in 4 days.' }]" class="container">
+      <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alerts.splice($index, 1);">{{alert.msg}}</alert>
+    </div>
+    <div class="container">
+      <div class="row profile">
+        <div class="col-md-3">
+          <div class="avatar"><img src="../images/test/1.png"></div>
+          <div class="block-green">
+            <ul class="menu list-unstyled">
+              <li><a href="#"><span class="icon icon-message"></span><span>Send a Message</span></a></li>
+              <li class="disabled"><a href="#"><span class="icon icon-message"></span><span>Request <br/> Contact Details</span></a></li>
+            </ul>
+            <div>
+              <div class="title">Expert Stream</div>
+            </div>
+            <ul class="list list-unstyled">
+              <li>
+                <div class="title">STREAM ONE</div>
+                <div class="text">Lorem ipsum site amet, conse ctur vitae enim ut dolor</div>
+              </li>
+              <li>
+                <div class="title">FACEBOOK STREAM</div>
+                <div class="text">Lorem ipsum site amet, conse ctur vitae enim ut dolor</div>
+              </li>
+              <li>
+                <div class="title">BLOG STREAM 2</div>
+                <div class="text">Lorem ipsum site amet, conse ctur vitae enim ut dolor</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="block-user block-grey">
+            <div class="username">Michael Brown</div>
+            <div class="spec">I’m Graphic Designer in Chicago, IL. USA</div>
+            <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae enim ut dolor tincidunt elementum. Sed porta tincidunt ante, tempus iaculis diam hendrerit a. Morbi ut sagittis sapien, ut dapibus tortor. Quisque nec dolor eget mauris pulvinar malesuada eu et sem. Sed lacus ligula, accumsan vitae sollicitudin venenatis, auctor vitae tells.</div>
+            <div class="social"><a href="#"><span class="img-icon facebook"></span></a><a href="#"><span class="img-icon twitter"></span></a><a href="#"><span class="img-icon pinterest"></span></a></div>
+            <div class="honors"><span class="img-icon star"></span><span class="img-icon cup"></span></div>
+          </div>
+          <div class="block-white">
+            <div class="title">Experience</div>
+            <div class="years">2000 - 2002</div>
+            <div class="sub-title">Nescafe Interactive</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae enim ut dolor tincidunt elementum. Sed porta tincidunt ante, tempus iaculis diam hendrerit a. Morbi ut sagittis sapien.</div>
+          </div>
+          <div class="block-white">
+            <div class="title">Education</div>
+            <div class="clearfix"></div>
+            <div class="item">
+              <div class="years">1999 - 2000</div>
+              <div class="sub-title">NorthEastern University</div>
+              <div class="city">Chicago IL</div>
+              <div class="faculty">M.F.A Graphic Design</div>
+            </div>
+            <div class="item">
+              <div class="years">1999 - 2000</div>
+              <div class="sub-title">DePaul University</div>
+              <div class="city">Chicago IL</div>
+              <div class="faculty">M.F.A Graphic Design</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="right-panel">
+            <div class="skills">
+              <div class="title">Skills</div>
+              <div class="item"><span>Packaging Design</span>
+                <progressbar value="90"></progressbar>
+              </div>
+              <div class="item"><span>Illustration</span>
+                <progressbar value="60"></progressbar>
+              </div>
+              <div class="item"><span>Packaging Design</span>
+                <progressbar value="50" type="yellow"></progressbar>
+              </div>
+              <div class="item"><span>Packaging Design</span>
+                <progressbar value="20" type="red"></progressbar>
+              </div>
+            </div>
+            <div class="porfolio">
+              <div class="title">Project portfolio</div>
+              <ul class="media-list">
+                <li class="media">
+                  <div class="media-left"><a href="#"><img src="../images/test/4.png" width="50" height="50" class="media-object"></a></div>
+                  <div class="media-body">
+                    <div class="media-heading">Nestea Package</div>
+                    <div class="text">Package design</div>
+                    <div ng-init="rate[1]=2">
+                      <rating ng-model="rate[1]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating>
+                    </div>
+                  </div>
+                </li>
+                <li class="media">
+                  <div class="media-left"><a href="#"><img src="../images/test/3.png" width="50" height="50" class="media-object"></a></div>
+                  <div class="media-body">
+                    <div class="media-heading">DURACELL</div>
+                    <div class="text">web design, name two</div>
+                    <div ng-init="rate[222]=1">
+                      <rating ng-model="rate[222]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating>
+                    </div>
+                  </div>
+                </li>
+                <li class="media">
+                  <div class="media-left"><a href="#"><img src="../images/test/5.png" width="50" height="50" class="media-object"></a></div>
+                  <div class="media-body">
+                    <div class="media-heading">COCA COLA</div>
+                    <div class="text">Package design, branding</div>
+                    <div ng-init="rate[11]=3">
+                      <rating ng-model="rate[11]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating>
+                    </div>
+                  </div>
+                </li>
+                <li class="media">
+                  <div class="media-left"><a href="#"><img src="../images/test/1.png" width="50" height="50" class="media-object"></a></div>
+                  <div class="media-body">
+                    <div class="media-heading">DURACELL</div>
+                    <div class="text">web design, name two</div>
+                    <div ng-init="rate[222]=1">
+                      <rating ng-model="rate[222]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating>
+                    </div>
+                  </div>
+                </li>
+                <li class="media">
+                  <div class="media-left"><a href="#"><img src="../images/test/2.png" width="50" height="50" class="media-object"></a></div>
+                  <div class="media-body">
+                    <div class="media-heading">COCA COLA</div>
+                    <div class="text">Package design, branding</div>
+                    <div ng-init="rate[11]=3">
+                      <rating ng-model="rate[11]" max="3" readonly="true" state-off="'icon icon-star'" state-on="'icon icon-star2'"></rating>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

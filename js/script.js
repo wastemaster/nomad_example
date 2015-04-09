@@ -30575,6 +30575,28 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 (function() {
   var app;
 
-  app = angular.module('nomad', ['ui.bootstrap']);
+  app = angular.module("InputHoshi", []);
+
+  app.directive('inputHoshi', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'angular-templates/field_hoshi.html',
+      transclude: true,
+      scope: {
+        fieldModel: '='
+      },
+      link: function(scope, element, attr) {
+        scope.field = attr;
+        return scope.fieldModel = attr.value;
+      }
+    };
+  });
+
+}).call(this);
+
+(function() {
+  var app;
+
+  app = angular.module('nomad', ['ui.bootstrap', 'InputHoshi']);
 
 }).call(this);

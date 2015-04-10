@@ -1,3 +1,13 @@
+a.read-more, a.read-less {
+	cursor: pointer;
+	color: blue;
+}
+span.more-text {
+	display: none;
+} 
+span.more-text.show {
+		display: inline !important
+}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -4331,13 +4341,12 @@ button.close {
 }
 .icon {
   font-family: 'icomoon';
-  speak: none;
+  position: relative;
+  top: 1px;
+  display: inline-block;
   font-style: normal;
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -4390,6 +4399,20 @@ button.close {
 body {
   padding-top: 38px;
   padding-bottom: 38px;
+}
+a {
+  opacity: 1;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+a:hover,
+a:active {
+  opacity: 0.6;
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
 }
 .navbar-nomad {
   border: none;
@@ -4480,6 +4503,10 @@ body {
   font-size: 14px;
   line-height: 12px;
 }
+.navbar-nomad .dropdown-menu li a:hover,
+.navbar-nomad .dropdown-menu li a:focus {
+  opacity: 1;
+}
 .block-white {
   padding: 30px;
   background-color: #ffffff;
@@ -4534,7 +4561,6 @@ body {
   content: "Upload Photo";
   position: absolute;
   width: 100%;
-  height: 100%;
   font-weight: 500;
   font-size: 23px;
   line-height: 26px;
@@ -4624,8 +4650,6 @@ body {
 .profile .block-user .info {
   margin-bottom: 20px;
   line-height: 22px;
-  height: 88px;
-  overflow: hidden;
 }
 .profile .block-user .social a {
   margin-right: 5px;
@@ -4681,10 +4705,6 @@ body {
   display: table-cell;
   vertical-align: middle;
 }
-.block-green ul.menu li a:hover {
-  text-decoration: none;
-  color: #87e4dd;
-}
 .block-green ul.menu li:after {
   width: 102px;
   height: 1px;
@@ -4693,6 +4713,9 @@ body {
   bottom: -24px;
   left: 0;
   position: absolute;
+}
+.block-green ul.menu li a {
+  display: block;
 }
 .block-green ul.list {
   font-size: 14px;
@@ -4704,6 +4727,9 @@ body {
 }
 .block-green ul.list li:last-child {
   margin-bottom: 0;
+}
+.block-green ul.list li a {
+  display: block;
 }
 .block-green ul.list .title {
   font-size: 14px;
@@ -4771,32 +4797,36 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
 }
-.right-panel .porfolio .title {
+.right-panel .portfolio .title {
   color: #ff6b6b;
   font-size: 17px;
   line-height: 17px;
 }
-.right-panel .porfolio .media {
+.right-panel .portfolio .media {
   margin-top: 35px;
 }
-.right-panel .porfolio .media img {
+.right-panel .portfolio .media img {
   border-radius: 50px;
 }
-.right-panel .porfolio .media-body {
+.right-panel .portfolio .media-body {
   color: #58676c;
   font-size: 13px;
   font-weight: 500;
   line-height: 17px;
 }
-.right-panel .porfolio .media-body .media-heading {
+.right-panel .portfolio .media-body a {
+  display: block;
+}
+.right-panel .portfolio .media-body .media-heading {
   text-transform: uppercase;
   color: #424f53;
   margin-bottom: 0;
 }
-.right-panel .porfolio .media-body .text {
+.right-panel .portfolio .media-body .text {
   font-family: "FuturaExtended";
+  color: #6f6f6f;
 }
-.right-panel .porfolio .media-body .icon {
+.right-panel .portfolio .media-body .icon {
   color: #ddd165;
   font-size: 16px;
 }
@@ -4977,6 +5007,10 @@ body {
   background-color: #f2f2f2;
   position: relative;
 }
+.schedule_interview_steps .nav-tabs > li > a:hover,
+.schedule_interview_steps .nav-tabs > li > a:active {
+  opacity: 1;
+}
 .schedule_interview_steps .nav-tabs > li > a:before {
   position: absolute;
   top: 0;
@@ -5003,6 +5037,10 @@ body {
 input-hoshi {
   margin-bottom: 20px;
   display: block;
+}
+.read-more,
+.read-less {
+  font-weight: 500;
 }
 /*https://github.com/codrops/TextInputEffects*/
 /*http://tympanus.net/Development/TextInputEffects/index.html*/

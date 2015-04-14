@@ -1,0 +1,18 @@
+[
+  {
+    "id": "12",
+    "school_name": "NorthEastern University",
+    "from_date": "06/2000",
+    "to_date": "12/2002",
+    "city": "Chicago IL",
+    "degree": "M.F.A Graphic Design"
+  },
+  {
+    "id": "121",
+    "school_name": "NorthEastern University2",
+    "from_date": "06/2000",
+    "to_date": "12/2002",
+    "city": "Chicago IL2",
+    "degree": "M.F.A Graphic Design2"
+  }
+]

@@ -4507,10 +4507,20 @@ a:focus {
 .navbar-nomad .dropdown-menu li a:focus {
   opacity: 1;
 }
+.together .block-white,
+.together .block-green,
+.together .block-grey {
+  margin-bottom: 0;
+}
 .block-white {
-  padding: 30px;
   background-color: #ffffff;
   color: #6f6f6f;
+}
+.block-white > .inner {
+  padding: 30px;
+}
+.block-white > .inner > .h3:first-child {
+  margin-top: 0;
 }
 .block-white a,
 .block-white h1,
@@ -4519,16 +4529,15 @@ a:focus {
 .block-white h4 {
   color: #6f6f6f;
 }
-.block-white > .h3:first-child {
-  margin-top: 0;
-}
 .color-green {
   color: #4ecdc4;
 }
 .block-green {
-  padding: 30px;
   background-color: #4ecdc4;
   color: #ffffff;
+}
+.block-green > .inner {
+  padding: 30px;
 }
 .block-green a,
 .block-green h1,
@@ -4538,9 +4547,14 @@ a:focus {
   color: #ffffff;
 }
 .block-grey {
-  padding: 30px;
   background-color: #f2f2f2;
   color: #1d1f24;
+}
+.block-grey > .inner {
+  padding: 30px;
+}
+.block-grey > .inner > .h3:first-child {
+  margin-top: 0;
 }
 .block-grey a,
 .block-grey h1,
@@ -4548,9 +4562,6 @@ a:focus {
 .block-grey h3,
 .block-grey h4 {
   color: #1d1f24;
-}
-.block-grey > .h3:first-child {
-  margin-top: 0;
 }
 .avatar {
   background: #d9dfe1 url("../images/upload.png") center no-repeat;
@@ -4579,10 +4590,52 @@ a:focus {
 .block-white {
   margin-bottom: 20px;
 }
-.profile .block-white {
+.experience,
+.education {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+.experience:last-child,
+.education:last-child {
+  margin-bottom: 0;
+}
+.experience .title,
+.education .title,
+.experience .sub-title,
+.education .sub-title {
+  color: #535353;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 27px;
+}
+.experience .sub-title,
+.education .sub-title {
+  font-size: 17px;
+}
+.experience .years,
+.education .years {
+  float: right;
+  font-weight: 500;
+  color: #535353;
+}
+.experience .text,
+.education .text {
+  margin-top: 12px;
+}
+.education .faculty {
+  font-weight: 500;
+  color: #535353;
+  margin-top: 5px;
+}
+.education .city {
+  font-style: italic;
+  font-weight: 500;
+  color: #535353;
+}
+.profile .block-white > .inner {
   padding: 35px 20px 30px 40px;
 }
-.profile .block-white .title {
+.profile .block-white .htitle {
   font-size: 34px;
   font-weight: 500;
   line-height: 35px;
@@ -4590,7 +4643,7 @@ a:focus {
   margin-bottom: 50px;
   color: #535353;
 }
-.profile .block-white .title:after {
+.profile .block-white .htitle:after {
   width: 201px;
   height: 1px;
   content: "";
@@ -4598,36 +4651,6 @@ a:focus {
   bottom: -20px;
   left: 0;
   position: absolute;
-}
-.profile .block-white .sub-title {
-  color: #535353;
-  font-size: 23px;
-  font-weight: 500;
-  line-height: 27px;
-}
-.profile .block-white .text {
-  margin-top: 12px;
-}
-.profile .block-white .item {
-  margin-bottom: 30px;
-}
-.profile .block-white .item:last-child {
-  margin-bottom: 0;
-}
-.profile .block-white .years {
-  float: right;
-  font-weight: 500;
-  color: #535353;
-}
-.profile .block-white .faculty {
-  font-weight: 500;
-  color: #535353;
-  margin-top: 5px;
-}
-.profile .block-white .city {
-  font-style: italic;
-  font-weight: 500;
-  color: #535353;
 }
 .profile .block-user {
   padding: 35px 70px 20px 40px;
@@ -4735,10 +4758,10 @@ a:focus {
   font-size: 14px;
   text-transform: uppercase;
 }
-.block-grey {
+.block-grey > .inner {
   padding: 35px 20px 30px 40px;
 }
-.block-grey > .title {
+.block-grey .htitle {
   font-size: 34px;
   font-weight: 500;
   line-height: 35px;
@@ -5034,13 +5057,110 @@ a:focus {
   border: none;
   cursor: default;
 }
-input-hoshi {
+input-hoshi,
+input-hoshi-month {
   margin-bottom: 20px;
   display: block;
 }
 .read-more,
 .read-less {
   font-weight: 500;
+}
+.btn-black {
+  color: #ffffff;
+  background-color: #333333;
+  border-color: #333333;
+  font-family: "FuturaExtended";
+  font-size: 17px;
+  padding: 4px 40px;
+}
+.btn-black:hover,
+.btn-black:focus,
+.btn-black.focus,
+.btn-black:active,
+.btn-black.active,
+.open > .dropdown-toggle.btn-black {
+  color: #ffffff;
+  background-color: #1a1a1a;
+  border-color: #141414;
+}
+.btn-black:active,
+.btn-black.active,
+.open > .dropdown-toggle.btn-black {
+  background-image: none;
+}
+.btn-black.disabled,
+.btn-black[disabled],
+fieldset[disabled] .btn-black,
+.btn-black.disabled:hover,
+.btn-black[disabled]:hover,
+fieldset[disabled] .btn-black:hover,
+.btn-black.disabled:focus,
+.btn-black[disabled]:focus,
+fieldset[disabled] .btn-black:focus,
+.btn-black.disabled.focus,
+.btn-black[disabled].focus,
+fieldset[disabled] .btn-black.focus,
+.btn-black.disabled:active,
+.btn-black[disabled]:active,
+fieldset[disabled] .btn-black:active,
+.btn-black.disabled.active,
+.btn-black[disabled].active,
+fieldset[disabled] .btn-black.active {
+  background-color: #333333;
+  border-color: #333333;
+}
+.btn-black .badge {
+  color: #333333;
+  background-color: #ffffff;
+}
+.btn-red {
+  color: #ffffff;
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+  font-family: "FuturaExtended";
+  font-size: 17px;
+  padding: 4px 40px;
+}
+.btn-red:hover,
+.btn-red:focus,
+.btn-red.focus,
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red {
+  color: #ffffff;
+  background-color: #ff3838;
+  border-color: #ff2e2e;
+}
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red {
+  background-image: none;
+}
+.btn-red.disabled,
+.btn-red[disabled],
+fieldset[disabled] .btn-red,
+.btn-red.disabled:hover,
+.btn-red[disabled]:hover,
+fieldset[disabled] .btn-red:hover,
+.btn-red.disabled:focus,
+.btn-red[disabled]:focus,
+fieldset[disabled] .btn-red:focus,
+.btn-red.disabled.focus,
+.btn-red[disabled].focus,
+fieldset[disabled] .btn-red.focus,
+.btn-red.disabled:active,
+.btn-red[disabled]:active,
+fieldset[disabled] .btn-red:active,
+.btn-red.disabled.active,
+.btn-red[disabled].active,
+fieldset[disabled] .btn-red.active {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+.btn-red .badge {
+  color: #ff6b6b;
+  background-color: #ffffff;
 }
 /*https://github.com/codrops/TextInputEffects*/
 /*http://tympanus.net/Development/TextInputEffects/index.html*/
@@ -5114,6 +5234,10 @@ input-hoshi {
   height: 100%;
   text-align: left;
   pointer-events: none;
+}
+.ng-invalid.ng-dirty + .input__label--hoshi::after,
+.ng-invalid.ng-dirty + .input__label--hoshi::before {
+  border-color: #ff6b6b;
 }
 .input__label-content--hoshi {
   position: absolute;
